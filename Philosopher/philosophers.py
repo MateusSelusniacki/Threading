@@ -10,7 +10,6 @@ class philosopher(threading.Thread):
     def __init__(self,id):
         super().__init__()
         self.id = id
-        print(id)
         return
     
     def run(self):
@@ -37,7 +36,6 @@ class philosopher(threading.Thread):
 p = [philosopher(i) for i in range(N_PHILOSOPHERS)]
 
 for i in p:
-    print(i)
     i.start()
 
 for i in p:
